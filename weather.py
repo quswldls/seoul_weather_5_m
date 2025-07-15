@@ -4,7 +4,7 @@ import os                     # 폴더 생성
 from datetime import datetime # 시간 변환
 API_KEY_W = os.getenv("API_KEY_W")
 city = "seoul"
-url_weather = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
+url_weather = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY_W}&units=metric"
 response = requests.get(url_weather)
 result = response.json()
 temp = result["main"]["temp"] # 현재 기온
