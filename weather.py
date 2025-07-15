@@ -7,10 +7,10 @@ city = "seoul"
 url_weather = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
 response = requests.get(url_weather)
 result = response.json()
-temp = result["main"]["temp"] # 현재 기온
-humidity = result["main"]["humidity"] # 습도
 weather = result["weather"][0]["main"] # 날씨 상태
 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S") # 현재 시각
+temp = result["main"]["temp"] # 현재 기온
+humidity = result["main"]["humidity"] # 습도
 
 header = ["current_time", "weather", "temp", "humidity"] # csv header
 
